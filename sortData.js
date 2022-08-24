@@ -8,7 +8,7 @@ export default function SortData(data, category) {
     const product_id = e.id;
     const name = e.title;
     const url = `https://vintage-club-uk.myshopify.com/admin/products/${e.id}`;
-    const img = e.image?.src;
+    const img = e.image.src;
     var code = "";
 
     // Product Code Extraction Happens Here

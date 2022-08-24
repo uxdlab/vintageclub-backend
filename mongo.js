@@ -1,16 +1,11 @@
+import "dotenv/config";
 import mongoose from "mongoose";
 
 // Database Connection
 mongoose
-  .connect(
-    "mongodb+srv://vintageuxd:vintageuxdlab@vintageclub.jjbat.mongodb.net/VintageClub"
-  )
-  .then(() => {
-    console.log("Database Connection Established");
-  })
-  .catch((err) => {
-    console.log(err);
-  });
+  .connect(process.env.MONGOSTRING)
+  .then(() => console.log("Database Connection Established"))
+  .catch((err) => console.log(err));
 
 // Database Schema
 const dbSchema = new mongoose.Schema({
